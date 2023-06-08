@@ -111,7 +111,7 @@ static void CK_ATTRIBUTE_UNUSED sig_handler(int sig_nr)
     {
         case SIGALRM:
             alarm_received = 1;
-            killpg(group_pid, SIGKILL);
+            killpg(group_pid, SIGQUIT);
             break;
         case SIGTERM:
         case SIGINT:
